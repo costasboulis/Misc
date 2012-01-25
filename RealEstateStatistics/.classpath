@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="C:/Users/kboulis/.m2/repository/org/slf4j/slf4j-api/1.5.10/slf4j-api-1.5.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kboulis/.m2/repository/ch/qos/logback/logback-core/0.9.18/logback-core-0.9.18.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kboulis/.m2/repository/ch/qos/logback/logback-classic/0.9.18/logback-classic-0.9.18.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kboulis/.m2/repository/weka/weka/3.6.2/weka-3.6.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
