@@ -8,21 +8,33 @@ import weka.core.Instance;
 
 public class NonNegativeLinearRegression extends Classifier{
 	private LinearRegression model;
+	private double minimum;
+	private double maximum;
 	static final long serialVersionUID = -3364580862046573748L;
 	
 	
 	public void buildClassifier(Instances instances) throws Exception{
-		model = new LinearRegression();
-		model.setAttributeSelectionMethod(new SelectedTag(LinearRegression.SELECTION_NONE, LinearRegression.TAGS_SELECTION));
-		model.setRidge(0.0);
-		model.setEliminateColinearAttributes(false);
-		
 		model.buildClassifier(instances);
 	}
 
+	public void setRegressor(LinearRegression rmodel) {
+		this.model = rmodel;
+	}
+	
+	public void setMinimum(double min) {
+		this.minimum = min;
+	}
+	
+	public void setMaximum(double max) {
+		this.maximum = max;
+	}
+	
 	public double classifyInstance(Instance instance) throws Exception {
 		double value = model.classifyInstance(instance);
-//		System.out.println(value + " " + instance.classValue());
-		return value < 0.0 ? 0.0 : value;
+		return value < minimum ? minimum : value > maximum ? maximum : value;
+	}
+	
+	public String toString() {
+		return model.toString();
 	}
 }
